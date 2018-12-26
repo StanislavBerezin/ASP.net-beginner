@@ -7,9 +7,11 @@ using System.Web.Mvc;
 namespace MVC.Controllers
 {
     public class HomeController : Controller
-    {
+    { //goes to views/Home, and gets the Index, because of the function name
+
         public ActionResult Index()
         {
+           
             return View();
         }
 

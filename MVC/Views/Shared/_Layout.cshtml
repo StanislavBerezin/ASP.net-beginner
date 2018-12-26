@@ -1,8 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- -->
+    <!-- This viewbag title is defined in each page of views seperately -->
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -34,7 +37,10 @@
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
+    <!-- in BundleConfig.cs, we have defined the path when front-end requires to render these components
+        if something put in more than 1 location in html (js) then we do RenderSection(scripts, required:false),
+        thus Scripts.Render can be called anywhere in the file. FOr example RenderBody  we can have JS code like (check
+        index.cshtml)-->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

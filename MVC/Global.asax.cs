@@ -12,6 +12,7 @@ namespace MVC
     {
         protected void Application_Start()
         {
+            //this is where the application starts
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
